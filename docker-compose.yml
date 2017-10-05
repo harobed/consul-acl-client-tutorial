@@ -1,0 +1,22 @@
+version: '2'
+services:
+  consul1:
+    image: consul:latest
+    command: consul agent -config-file=/consul/config/consul.json
+    ports:
+      - "8300:8300"
+      - "8301:8301"
+      - "8500:8500"
+      - "8600:8600"
+    volumes:
+      - ./data/:/consul/data/
+      - ./config/:/consul/config/
+
+  consul-cli:
+    image: harobed/consul-cli:0.5.0
+    environment:
+      - CONSUL_HTTP_ADDR=consul1:8500
+
+networks:
+  default:
+    driver: bridge

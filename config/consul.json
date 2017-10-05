@@ -1,0 +1,15 @@
+{
+  "datacenter": "scaleway-paris",
+  "data_dir": "/consul/data/",
+  "log_level": "INFO",
+  "node_name": "node1",
+  "server": true,
+  "bootstrap_expect": 1,
+  "client_addr": "0.0.0.0",
+  "ui": true,
+  "acl_datacenter": "scaleway-paris",
+  "acl_master_token": "FBAF54CC-E03D-4763-9F19-376114D3857B",
+  "acl_default_policy": "deny",
+  "acl_down_policy": "extend-cache",
+  "acl_agent_token": "f710a920-bb12-b356-ea1f-80f85f88f80b"
+}
